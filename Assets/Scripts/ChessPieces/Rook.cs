@@ -16,6 +16,7 @@ public class Rook : ChessPiece
             if (team == 0 && board[currentX, currentY + (direction * 2)] == null)
                 r.Add(new Vector2Int(currentX, currentY + (direction * 2)));
 
+
             //Black team
             if (team == 1 && currentY == 6 && board[currentX, currentY + (direction * 2)] == null)
                 r.Add(new Vector2Int(currentX, currentY + (direction * 2)));
