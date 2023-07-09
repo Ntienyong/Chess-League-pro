@@ -25,4 +25,12 @@ public class NetworkUIManager : MonoBehaviour
     {
         client.Init(URL, PORT);
     }
+
+    public void ShutDownServerAndClient()
+    {
+
+        Debug.Log("server has shutdown");
+        Client.Instance.Shutdown();
+        Server.Instance.Shutdown();
+    }
 }

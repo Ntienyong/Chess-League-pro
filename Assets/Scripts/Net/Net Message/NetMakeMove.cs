@@ -45,7 +45,7 @@ public class NetMakeMove : NetMessage
     }
     public override void ReceivedOnServer(NetworkConnection cnn)
     {
-        NetUtility.S_MAKE_MOVE.Invoke(this, cnn);
+        NetUtility.S_MAKE_MOVE?.Invoke(this, cnn);
     }
 }
 

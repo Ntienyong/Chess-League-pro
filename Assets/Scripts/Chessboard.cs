@@ -57,13 +57,15 @@ public class Chessboard : MonoBehaviour
     [SerializeField] private GameObject promotionUI;
 
     //Multiplayer logic
-    private int playerCount = -1;
-    private int currentTeam = -1;
-    private bool localGame = false;
+    //private int playerCount = -1;
+    //private int GameManager.instance.currentTeam = -1;
+    //private bool localGame = false;
     private bool[] playerRematch = new bool[2];
 
     private void Start()
     {
+        Debug.Log(GameManager.instance.currentTeam);
+
         isWhiteTurn = true;
 
         GenerateAllTiles(tileSize, TILE_COUNT_X, TILE_COUNT_Y);
@@ -71,7 +73,7 @@ public class Chessboard : MonoBehaviour
         PositionAllPieces();
         SpawnArena();
 
-        //RegisterEvents();
+        RegisterEvents();
     }
 
     private void Update()
@@ -108,10 +110,12 @@ public class Chessboard : MonoBehaviour
             //If we press down on the mouse button
             if (Input.GetMouseButtonDown(0))
             {
+                Debug.Log(isWhiteTurn);
+                Debug.Log(GameManager.instance.currentTeam);
                 if (chessPieces[hitPosition.x, hitPosition.y] != null)
                 {
                     //is it your turn?
-                    if ((chessPieces[hitPosition.x, hitPosition.y].team == 0 && isWhiteTurn && currentTeam == 0) || (chessPieces[hitPosition.x, hitPosition.y].team == 1 && isBlackTurn && currentTeam == 1))
+                    if ((chessPieces[hitPosition.x, hitPosition.y].team == 0 && isWhiteTurn && GameManager.instance.currentTeam == 0) || (chessPieces[hitPosition.x, hitPosition.y].team == 1 && !isWhiteTurn && GameManager.instance.currentTeam == 1))
                     {
                         currentlyDragging = chessPieces[hitPosition.x, hitPosition.y];
 
@@ -144,7 +148,7 @@ public class Chessboard : MonoBehaviour
                     mm.originalY = previousPosition.y;
                     mm.destinationX = hitPosition.x;
                     mm.destinationY = hitPosition.y;
-                    mm.teamId = currentTeam;
+                    mm.teamId = GameManager.instance.currentTeam;
                     Client.Instance.SendToServer(mm);
                 }
                 else
@@ -254,60 +258,68 @@ public class Chessboard : MonoBehaviour
 
     private ChessPiece SpawnHomeSinglePiece(ChessPieceType type, int team)
     {
-        ChessPiece cp = new ChessPiece();
-        if (MenuUI.Instance.homePieceTypeIndex == 0)
+        
+        if (GameManager.instance.homePieceTypeIndex == 0)
         {
             //ChessPiece cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
-            cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
+            ChessPiece cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
 
             cp.type = type;
             cp.team = team;
             //cp.GetComponent<MeshRenderer>().material = teamMaterials[((team == 0) ? 0 : 6) + ((int)type - 1)];
-            //cp.GetComponent<MeshRenderer>().material.color = MenuUI.Instance.homePiecesColor[MenuUI.Instance.homeTeamColorIndex];
+            cp.GetComponent<MeshRenderer>().material.color = GameManager.instance.homePiecesColor;
+
+            return cp;
         }
-        if (MenuUI.Instance.homePieceTypeIndex == 1)
+        if (GameManager.instance.homePieceTypeIndex == 1)
         {
             //ChessPiece cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
-            cp = Instantiate(prefabsOne[(int)type - 1], transform).GetComponent<ChessPiece>();
+            ChessPiece cp = Instantiate(prefabsOne[(int)type - 1], transform).GetComponent<ChessPiece>();
 
             cp.type = type;
             cp.team = team;
             //cp.GetComponent<MeshRenderer>().material = teamMaterials[((team == 0) ? 0 : 6) + ((int)type - 1)];
-            cp.GetComponent<MeshRenderer>().material.color = MenuUI.Instance.homePiecesColor[MenuUI.Instance.homeTeamColorIndex];
+            cp.GetComponent<MeshRenderer>().material.color = GameManager.instance.homePiecesColor;
+
+            return cp;
         }
 
-        return cp;
+        return null;
     }
 
     private ChessPiece SpawnAwaySinglePiece(ChessPieceType type, int team)
     {
-        ChessPiece cp = new ChessPiece();
-        if (MenuUI.Instance.awayPieceTypeIndex == 0)
+        
+        if (GameManager.instance.awayPieceTypeIndex == 0)
         {
             //ChessPiece cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
-            cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
+            ChessPiece cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
 
             cp.type = type;
             cp.team = team;
             //cp.GetComponent<MeshRenderer>().material = teamMaterials[((team == 0) ? 0 : 6) + ((int)type - 1)];
-            cp.GetComponent<MeshRenderer>().material.color = MenuUI.Instance.awayPiecesColor[MenuUI.Instance.awayTeamColorIndex];
+            cp.GetComponent<MeshRenderer>().material.color = GameManager.instance.awayPiecesColor;
+
+            return cp;
         }
-        if(MenuUI.Instance.awayPieceTypeIndex == 1)
+        if(GameManager.instance.awayPieceTypeIndex == 1)
         {
             //ChessPiece cp = Instantiate(prefabs[(int)type - 1], transform).GetComponent<ChessPiece>();
-            cp = Instantiate(prefabsOne[(int)type - 1], transform).GetComponent<ChessPiece>();
+            ChessPiece cp = Instantiate(prefabsOne[(int)type - 1], transform).GetComponent<ChessPiece>();
 
             cp.type = type;
             cp.team = team;
             //cp.GetComponent<MeshRenderer>().material = teamMaterials[((team == 0) ? 0 : 6) + ((int)type - 1)];
-            cp.GetComponent<MeshRenderer>().material.color = MenuUI.Instance.awayPiecesColor[MenuUI.Instance.awayTeamColorIndex];
+            cp.GetComponent<MeshRenderer>().material.color = GameManager.instance.awayPiecesColor;
+
+            return cp;
         }
 
-        return cp;
+        return null;
     }
     private void SpawnArena()
     {
-        int index = MenuUI.Instance.arenaIndex;
+        int index = GameManager.instance.stadiumIndex;
         GameObject arena = new GameObject();
         arena = Instantiate(stadiums[index], transform.position, transform.rotation);
 
@@ -365,8 +377,9 @@ public class Chessboard : MonoBehaviour
 
     public void OnRematchButton()
     {
-        if(localGame)
+        if(GameManager.instance.localGame)
         {
+            Debug.Log("Rematching in Local");
 
             NetRematch wrm = new NetRematch();
             wrm.teamId = 0;
@@ -381,7 +394,7 @@ public class Chessboard : MonoBehaviour
         else
         {
             NetRematch rm = new NetRematch();
-            rm.teamId = currentTeam;
+            rm.teamId = GameManager.instance.currentTeam;
             rm.wantRematch = 1;
             Client.Instance.SendToServer(rm);
         }
@@ -427,16 +440,13 @@ public class Chessboard : MonoBehaviour
 
         SpawnAllpieces();
         PositionAllPieces();
-        GameUI.Instance.whiteTimeLeft = MenuUI.Instance.timeLeft;
-        GameUI.Instance.blackTimeLeft = MenuUI.Instance.timeLeft;
+        GameUI.Instance.whiteTimeLeft = GameManager.instance.timeLeft;
+        GameUI.Instance.blackTimeLeft = GameManager.instance.timeLeft;
         GameUI.Instance.blackTimerOn = false;
         GameUI.Instance.whiteTimerOn = false;
         GameUI.Instance.whiteTimerText.text = "00 : 00";
         GameUI.Instance.blackTimerText.text = "00 : 00";
         isWhiteTurn = true;
-        currentTeam = 0;
-        
-
 
         //isGameRestarted = true;
 
@@ -446,18 +456,17 @@ public class Chessboard : MonoBehaviour
     public void OnMenuButton()
     {
         NetRematch rm = new NetRematch();
-        rm.teamId = currentTeam;
+        rm.teamId = GameManager.instance.currentTeam;
         rm.wantRematch = 0;
         Client.Instance.SendToServer(rm);
 
         GameReset();
-        GameUI.Instance.OnLeaveFromGameMenu();
 
-        Invoke("ShutdownRelay", 1.0f);
+        Invoke("ShutDown", .1f);
 
+        GameUI.Instance.StartCouroutineLoadScene();
         // Reset some values
-        playerCount = -1;
-        currentTeam = -1;
+        
     }
 
     //Special Moves
@@ -931,10 +940,10 @@ public class Chessboard : MonoBehaviour
         PositionSinglePiece(x, y);
 
         isWhiteTurn = !isWhiteTurn;
-        if (!isWhiteTurn)
-        {
-            isBlackTurn = true;
-        }
+        //if (!isWhiteTurn)
+        //{
+        //    isBlackTurn = true;
+        //}
 
         if (!isWhiteTurn)
         {
@@ -952,8 +961,10 @@ public class Chessboard : MonoBehaviour
         StartCoroutine(WhiteTimerCountdown());
 
 
-        if (localGame)
-            currentTeam = (currentTeam == 0) ? 1 : 0;
+        if (GameManager.instance.localGame)
+        {
+            GameManager.instance.currentTeam = (GameManager.instance.currentTeam == 0) ? 1 : 0;
+        }
 
         moveList.Add(new Vector2Int[] { previousPosition, new Vector2Int(x, y) });
 
@@ -973,12 +984,9 @@ public class Chessboard : MonoBehaviour
     #region
     private void RegisterEvents()
     {
-        //NetUtility.S_WELCOME += OnWelcomeServer;
         NetUtility.S_MAKE_MOVE += OnMakeMoveServer;
         NetUtility.S_REMATCH += OnRematchServer;
 
-        NetUtility.C_WELCOME += OnWelcomeClient;
-        NetUtility.C_START_GAME += OnStartGameClient;
         NetUtility.C_MAKE_MOVE += OnMakeMoveClient;
         NetUtility.C_REMATCH += OnRematchClient;
 
@@ -991,8 +999,8 @@ public class Chessboard : MonoBehaviour
         NetUtility.S_MAKE_MOVE -= OnMakeMoveServer;
         NetUtility.S_REMATCH -= OnRematchServer;
 
-        NetUtility.C_WELCOME -= OnWelcomeClient;
-        NetUtility.C_START_GAME -= OnStartGameClient;
+        //NetUtility.C_WELCOME -= OnWelcomeClient;
+        //NetUtility.C_START_GAME -= OnStartGameClient;
         NetUtility.C_MAKE_MOVE -= OnMakeMoveClient;
         NetUtility.C_REMATCH -= OnRematchClient;
 
@@ -1000,25 +1008,7 @@ public class Chessboard : MonoBehaviour
     }
 
     //Server
-    private void OnWelcomeServer(NetMessage msg, NetworkConnection cnn)
-    {
-        Debug.Log("Message from server to client");
-        //Client has connected, assign a team and return the message back to him
-        NetWelcome nw = msg as NetWelcome;
 
-        //Assign a team
-        nw.AssignedTeam = ++playerCount;
-        Debug.Log(playerCount);
-        //nw.AssignedTeam = MenuUI.Instance.homeAndAwayButtonClicked;
-
-        //Return back to client
-        Server.Instance.SendToClient(cnn, nw);
-
-        //If full, start the game
-        //if (playerCount == 1)
-        //    Server.Instance.Broadcast(new NetStartGame());
-
-    }
     private void OnMakeMoveServer(NetMessage msg, NetworkConnection cnn)
     {
         //Receive the message, broadcast it back
@@ -1030,58 +1020,46 @@ public class Chessboard : MonoBehaviour
     }
     private void OnRematchServer(NetMessage msg, NetworkConnection cnn)
     {
-        Server.Instance.Broadcast(msg);
+        NetRematch rm = msg as NetRematch;
+        Server.Instance.Broadcast(rm);
     }
 
     //Client
-    private void OnWelcomeClient(NetMessage msg)
-    {
-        //Recieve the connection message
-        NetWelcome nw = msg as NetWelcome;
+    //private void OnWelcomeClient(NetMessage msg)
+    //{
+    //    //Recieve the connection message
+    //    NetWelcome nw = msg as NetWelcome;
 
-        //Assign the team
-        //if(nw.AssignedTeam == 0)
-        //{
-        //    currentTeam = nw.AssignedTeam;
-        //    GameUI.Instance.whiteTimerText = GameObject.Find("WhiteTimerText").GetComponent<TextMeshProUGUI>();
-        //    GameUI.Instance.blackTimerText = GameObject.Find("BlackTimerText").GetComponent<TextMeshProUGUI>();
-        //}
-        //else if(nw.AssignedTeam == 1)
-        //{
-        //    currentTeam = 0;
-        //    GameUI.Instance.whiteTimerText = GameObject.Find("BlackTimerText").GetComponent<TextMeshProUGUI>();
-        //    GameUI.Instance.blackTimerText = GameObject.Find("WhiteTimerText").GetComponent<TextMeshProUGUI>();
-        //}
+    //    //Assign the team
+    //    //if(nw.AssignedTeam == 0)
+    //    //{
+    //    //    GameManager.instance.currentTeam = nw.AssignedTeam;
+    //    //    GameUI.Instance.whiteTimerText = GameObject.Find("WhiteTimerText").GetComponent<TextMeshProUGUI>();
+    //    //    GameUI.Instance.blackTimerText = GameObject.Find("BlackTimerText").GetComponent<TextMeshProUGUI>();
+    //    //}
+    //    //else if(nw.AssignedTeam == 1)
+    //    //{
+    //    //    GameManager.instance.currentTeam = 0;
+    //    //    GameUI.Instance.whiteTimerText = GameObject.Find("BlackTimerText").GetComponent<TextMeshProUGUI>();
+    //    //    GameUI.Instance.blackTimerText = GameObject.Find("WhiteTimerText").GetComponent<TextMeshProUGUI>();
+    //    //}
 
-        currentTeam = nw.AssignedTeam;
-        //currentTeam = MenuUI.Instance.opponentTeam;
+    //    GameManager.instance.currentTeam = nw.AssignedTeam;
+    //    //GameManager.instance.currentTeam = MenuUI.Instance.opponentTeam;
 
-        Debug.Log($"My assigned team is {nw.AssignedTeam}");
+    //    Debug.Log($"My assigned team is {nw.AssignedTeam}");
 
-        //if (localGame && currentTeam == 0 || localGame && currentTeam == 1)
-        //    Server.Instance.Broadcast(new NetStartGame());
-    }
+    //    //if (localGame && GameManager.instance.currentTeam == 0 || localGame && GameManager.instance.currentTeam == 1)
+    //    //    Server.Instance.Broadcast(new NetStartGame());
+    //}
 
-    private void OnStartGameClient(NetMessage obj)
-    {
-        //We just need to change the camera
-        if (MenuUI.Instance.homeAndAwayButtonClicked == 1)
-        {
-            GameUI.Instance.ChangeCamera(CameraAngle.blackTeam);
 
-        }
-        else if (MenuUI.Instance.homeAndAwayButtonClicked == 0)
-        {
-            GameUI.Instance.ChangeCamera(CameraAngle.whiteTeam);
-        }
-        //GameUI.Instance.ChangeCamera((currentTeam == 0) ? CameraAngle.whiteTeam : CameraAngle.blackTeam);
-    }
     private void OnMakeMoveClient(NetMessage msg)
     {
         NetMakeMove mm = msg as NetMakeMove;
 
         Debug.Log($"MM : {mm.teamId} : {mm.originalX} {mm.originalY} -> {mm.destinationX} {mm.destinationY}");
-        if(mm.teamId != currentTeam)
+        if(mm.teamId != GameManager.instance.currentTeam)
         {
             ChessPiece target = chessPieces[mm.originalX, mm.originalY];
 
@@ -1101,7 +1079,8 @@ public class Chessboard : MonoBehaviour
         playerRematch[rm.teamId] = rm.wantRematch == 1;
 
         //Activate the piece of UI
-        if (rm.teamId != currentTeam)
+        Debug.Log(rm.teamId + "current team = " + GameManager.instance.currentTeam);
+        if (rm.teamId != GameManager.instance.currentTeam )
         {
             rematchIndicator.transform.GetChild((rm.wantRematch == 1) ? 0 : 1).gameObject.SetActive(true);
             if(rm.wantRematch != 1)
@@ -1116,18 +1095,18 @@ public class Chessboard : MonoBehaviour
             GameReset();
     }
 
+    public void ShutDown()
+    {
+        NetworkUIManager.Instance.ShutDownServerAndClient();
+    }
+
     //
-    private void ShutdownRelay()
-    {
-        Client.Instance.Shutdown();
-        Server.Instance.Shutdown();
-    }
-    private void OnSetLocalGame(bool v)
-    {
-        playerCount = -1;
-        currentTeam = -1;
-        localGame = v;
-    }
+    //private void OnSetLocalGame(bool v)
+    //{
+    //    GameManager.instance.playerCount = -1;
+    //    GameManager.instance.currentTeam = -1;
+    //    localGame = v;
+    //}
 
     #endregion
 

@@ -51,7 +51,7 @@ public class CareerUI : MonoBehaviour
 
     // Start is called before the first frame update
 
-    private void Awake()
+    private void Start()
     {
         //Career
         MenuUI.Instance.countrySpriteIndex = 0;
