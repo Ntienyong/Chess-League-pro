@@ -23,7 +23,7 @@ public class MenuUI : MonoBehaviour
     [SerializeField] public TextMeshProUGUI homeTeamColorIndexText;
     [SerializeField] public TextMeshProUGUI awayTeamColorIndexText;
     [SerializeField] public TextMeshProUGUI pieceTypeText, homePieceTypeText, awayPieceTypeText;
-    [SerializeField] public TextMeshProUGUI arenaText;
+    [SerializeField] public TextMeshProUGUI arenaText, weatherText, timeOfDayText, difficultyText;
     [SerializeField] public TextMeshProUGUI teamSelectionText;
     [SerializeField] public Color[] pieceColor;
     [SerializeField] public Color[] homePiecesColor;
@@ -31,7 +31,7 @@ public class MenuUI : MonoBehaviour
     [SerializeField] public int homeTeamColorIndex;
     [SerializeField] public int awayTeamColorIndex;
     [SerializeField] public int pieceTypeIndex, homePieceTypeIndex, awayPieceTypeIndex;
-    [SerializeField] public int arenaIndex;
+    [SerializeField] public int arenaIndex, weatherIndex, timeOfDayIndex, difficultyIndex;
     [SerializeField] public bool homeTeamSelected;
     [SerializeField] public bool awayTeamSelected;
     [SerializeField] public Button homeColorButton, awayColorButton;
@@ -80,13 +80,13 @@ public class MenuUI : MonoBehaviour
 
 
 
-    private void Awake()
+    private void Start()
     {
         Instance = this;
 
-        numberOfTimesButtonClicked = 0;
-        timeGivenText.text = "1 Minute";
-        timeLeft = 60f;
+        numberOfTimesButtonClicked = 2;
+        timeGivenText.text = "10 Minute";
+        GameManager.instance.timeLeft = 600f;
 
         homeAndAwayButtonClicked = 0;
         opponentTeam = 1;
@@ -95,7 +95,16 @@ public class MenuUI : MonoBehaviour
         pieceTypeText.text = "Classic";
 
         arenaIndex = 0;
+        GameManager.instance.stadiumIndex = 0;
         arenaText.text = "Stadium 1";
+
+        timeOfDayIndex = 0;
+        difficultyIndex = 0;
+        weatherIndex = 0;
+
+        timeOfDayText.text = "Noon";
+        difficultyText.text = "Easy";
+        weatherText.text = "Sunny";
 
         //Career
         #region
@@ -178,6 +187,7 @@ public class MenuUI : MonoBehaviour
     public void OnSinglePlayerButton()
     {
         selectRuleSetSP.SetActive(true);
+        modeSelectionTextUI.text = "Single Player";
         selectPlayMode.SetActive(false);
     }
     public void OnSinglePlayerModeBackButton()
@@ -223,18 +233,31 @@ public class MenuUI : MonoBehaviour
     public void OnMWFButton()
     {
         selectServerOrClient.SetActive(true);
-        modeSelectionTextUI.text = "Multiplayer With Friends";
         selectPlayMode.SetActive(false);
     }
     public void OnHostButton()
     {
+        //GameManager.instance.isLocalGame = false;
+        GameManager.instance.SetLocalGame?.Invoke(false);
         waitingForClient.SetActive(true);
         NetworkUIManager.Instance.CreateOnlineHost();
         selectServerOrClient.SetActive(false);
     }
+    public void OnConnectPlayersBackButton()
+    {
+        selectServerOrClient.SetActive(false);
+        selectPlayMode.SetActive(true);
+    }
+    public void OnWaitingForPlayerBackButton()
+    {
+        waitingForClient.SetActive(false);
+        NetworkUIManager.Instance.ShutDownServerAndClient();
+        selectServerOrClient.SetActive(true);
+    }
     public void OnJoinButton()
     {
-       NetworkUIManager.Instance.JoinOnlineHost(addressInput.text);
+        GameManager.instance.SetLocalGame?.Invoke(false);
+        NetworkUIManager.Instance.JoinOnlineHost(addressInput.text);
     }
 
     public void OnTimerButton()
@@ -244,29 +267,29 @@ public class MenuUI : MonoBehaviour
         if (numberOfTimesButtonClicked == 1)
         {
             timeGivenText.text = "5 Minutes";
-            timeLeft = 300f;
+            GameManager.instance.timeLeft = 300f;
         }
         else if (numberOfTimesButtonClicked == 2)
         {
             timeGivenText.text = "10 Minutes";
-            timeLeft = 600f;
+            GameManager.instance.timeLeft = 600f;
         }
         else if (numberOfTimesButtonClicked == 3)
         {
             timeGivenText.text = "15 Minutes";
-            timeLeft = 900f;
+            GameManager.instance.timeLeft = 900f;
         }
         else if (numberOfTimesButtonClicked == 4)
         {
             timeGivenText.text = "20 Minutes";
-            timeLeft = 1200f;
+            GameManager.instance.timeLeft = 1200f;
         }
 
         if (numberOfTimesButtonClicked > 4)
         {
             numberOfTimesButtonClicked = 0;
             timeGivenText.text = "1 Minute";
-            timeLeft = 60f;
+            GameManager.instance.timeLeft = 60f;
         }
     }
     public void OnSelectSideButton()
@@ -313,21 +336,25 @@ public class MenuUI : MonoBehaviour
         homePiece.GetComponent<MeshRenderer>().material.color = homeColorPiece.GetComponent<MeshRenderer>().material.color;
         if (awayPieceTypeIndex == 0)
         {
+            GameManager.instance.awayPieceTypeIndex = 0;
             awayPiece.SetActive(true);
             awayPieceI.SetActive(false);
         }
         else if(awayPieceTypeIndex == 1)
         {
+            GameManager.instance.awayPieceTypeIndex = 1;
             awayPiece.SetActive(false);
             awayPieceI.SetActive(true);
         }
         if(homePieceTypeIndex == 0)
         {
+            GameManager.instance.homePieceTypeIndex = 0;
             homePiece.SetActive(true);
             homePieceI.SetActive(false);
         }
         else if(homePieceTypeIndex == 1)
         {
+            GameManager.instance.homePieceTypeIndex = 1;
             homePiece.SetActive(false);
             homePieceI.SetActive(true);
         }
@@ -370,17 +397,81 @@ public class MenuUI : MonoBehaviour
     public void OnSelectArenaButton()
     {
         arenaIndex++;
-        if(arenaIndex == 1)
+        if (arenaIndex == 2)
         {
+            GameManager.instance.stadiumIndex = 2;
+            arenaText.text = "Stadium 3";
+        }
+
+        if (arenaIndex == 1)
+        {
+            GameManager.instance.stadiumIndex = 1;
             arenaText.text = "Stadium 2"; 
         }
-        if(arenaIndex > 1)
+        if(arenaIndex > 2)
         {
             arenaIndex = 0;
+            GameManager.instance.stadiumIndex = 0;
             arenaText.text = "Stadium 1";
         }
     }
 
+    public void OnSelectDifficultyButton()
+    {
+        difficultyIndex++;
+        if (difficultyIndex == 2)
+        {
+            difficultyText.text = "Hard";
+        }
+
+        if (difficultyIndex == 1)
+        {
+            difficultyText.text = "Medium";
+        }
+        if (difficultyIndex > 2)
+        {
+            difficultyIndex = 0;
+            difficultyText.text = "Easy";
+        }
+    }
+
+    public void OnTimeOfDayButton()
+    {
+        timeOfDayIndex++;
+        if (timeOfDayIndex == 2)
+        {
+            timeOfDayText.text = "Night";
+        }
+
+        if (timeOfDayIndex == 1)
+        {
+            timeOfDayText.text = "Evening";
+        }
+        if (timeOfDayIndex > 2)
+        {
+            timeOfDayIndex = 0;
+            timeOfDayText.text = "Noon";
+        }
+    }
+
+    public void OnWeatherConditionButton()
+    {
+        weatherIndex++;
+        if (weatherIndex == 2)
+        {
+            weatherText.text = "Snowy";
+        }
+
+        if (weatherIndex == 1)
+        {
+            weatherText.text = "Rainy";
+        }
+        if (weatherIndex > 2)
+        {
+            weatherIndex = 0;
+            weatherText.text = "Sunny";
+        }
+    }
     public void OnConfirmSettingsButton()
     {
         customModeRules.SetActive(false);
@@ -510,6 +601,7 @@ public class MenuUI : MonoBehaviour
         if (homeTeamColorIndex == 1)
         {
             homeTeamColorIndexText.text = "Second";
+            GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
             homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
             homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
             homePieceI.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
@@ -518,6 +610,7 @@ public class MenuUI : MonoBehaviour
         if (homeTeamColorIndex == 2)
         {
             homeTeamColorIndexText.text = "Third";
+            GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
             homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
             homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
             homePieceI.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
@@ -527,10 +620,13 @@ public class MenuUI : MonoBehaviour
         {
             homeTeamColorIndexText.text = "First";
             homeTeamColorIndex = 0;
+            GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
             homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
             homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
             homePieceI.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
         }
+
+        Debug.Log(GameManager.instance.homePiecesColor);
     }
 
     public void OnSelectOppPieceColor()
@@ -539,6 +635,8 @@ public class MenuUI : MonoBehaviour
         if (awayTeamColorIndex == 1)
         {
             awayTeamColorIndexText.text = "Second";
+            GameManager.instance.awayPiecesColor = awayPiecesColor[awayTeamColorIndex];
+            
             awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
             awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
             awayPieceI.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
@@ -547,6 +645,7 @@ public class MenuUI : MonoBehaviour
         if (awayTeamColorIndex == 2)
         {
             awayTeamColorIndexText.text = "Third";
+            GameManager.instance.awayPiecesColor = awayPiecesColor[awayTeamColorIndex];
             awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
             awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
             awayPieceI.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
@@ -556,10 +655,13 @@ public class MenuUI : MonoBehaviour
         {
             awayTeamColorIndexText.text = "First";
             awayTeamColorIndex = 0;
+            GameManager.instance.awayPiecesColor = awayPiecesColor[awayTeamColorIndex];
             awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
             awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
             awayPieceI.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
         }
+
+        Debug.Log(GameManager.instance.awayPiecesColor);
     }
 
     public void OnSelectColorButton()
@@ -666,6 +768,7 @@ public class MenuUI : MonoBehaviour
                     homeTeamColorIndex = 0;
                     homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
                     homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
+                    GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -686,6 +789,7 @@ public class MenuUI : MonoBehaviour
                     awayTeamColorIndex = 0;
                     awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
                     awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
+                    GameManager.instance.awayPiecesColor = awayPiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -707,6 +811,7 @@ public class MenuUI : MonoBehaviour
                     homeTeamColorIndex = 0;
                     homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
                     homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
+                    GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -727,6 +832,7 @@ public class MenuUI : MonoBehaviour
                     awayTeamColorIndex = 0;
                     awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
                     awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
+                    GameManager.instance.awayPiecesColor = awayPiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -748,6 +854,7 @@ public class MenuUI : MonoBehaviour
                     homeTeamColorIndex = 0;
                     homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
                     homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
+                    GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -768,6 +875,7 @@ public class MenuUI : MonoBehaviour
                     awayTeamColorIndex = 0;
                     awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
                     awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
+                    GameManager.instance.awayPiecesColor = awayPiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -789,6 +897,7 @@ public class MenuUI : MonoBehaviour
                     homeTeamColorIndex = 0;
                     homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
                     homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
+                    GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -809,6 +918,7 @@ public class MenuUI : MonoBehaviour
                     awayTeamColorIndex = 0;
                     awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
                     awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
+                    GameManager.instance.awayPiecesColor = awayPiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -830,6 +940,7 @@ public class MenuUI : MonoBehaviour
                     homeTeamColorIndex = 0;
                     homeColorPiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
                     homePiece.GetComponent<MeshRenderer>().material.color = homePiecesColor[homeTeamColorIndex];
+                    GameManager.instance.homePiecesColor = homePiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -850,6 +961,7 @@ public class MenuUI : MonoBehaviour
                     awayTeamColorIndex = 0;
                     awayColorPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
                     awayPiece.GetComponent<MeshRenderer>().material.color = awayPiecesColor[awayTeamColorIndex];
+                    GameManager.instance.awayPiecesColor = awayPiecesColor[homeTeamColorIndex];
                 }
             }
         }
@@ -882,15 +994,21 @@ public class MenuUI : MonoBehaviour
 
     }
 
-    public void OnAwayTeamSelectedBytton()
+    public void OnAwayTeamSelectedButton()
     {
+
+    }
+    public IEnumerator ChangeToGameScene()
+    {
+        yield return new WaitForSeconds(0.2f);
+        SceneManager.LoadScene("GameMatch");
 
     }
     public void OnClassicButton()
     {
-        SceneManager.LoadScene("GameMatch");
-        this.gameObject.SetActive(false);
-        //isMatchLocal = true;
+        NetworkUIManager.Instance.CreateOnlineHost();
+
+        GameManager.instance.SetLocalGame?.Invoke(true);
     }
     #endregion
 

@@ -26,7 +26,7 @@ public class Client : MonoBehaviour
         connection = driver.Connect(endpoint);
         Debug.Log("Attempting to connect to Server on " + endpoint.Address);
         isActive = true;
-        //RegisterToEvent();
+        RegisterToEvent();
     }
     public void Shutdown()
     {
@@ -96,15 +96,14 @@ public class Client : MonoBehaviour
         driver.EndSend(writer);
     }
 
-    //Event parsing
-    //private void RegisterToEvent()
-    //{
-    //    NetUtility.C_KEEP_ALIVE += OnKeepAlive;
-    //}
-    //private void UnregisterToEvent()
-    //{
-    //    NetUtility.C_KEEP_ALIVE -= OnKeepAlive;
-    //}
+    private void RegisterToEvent()
+    {
+        NetUtility.C_KEEP_ALIVE += OnKeepAlive;
+    }
+    private void UnregisterToEvent()
+    {
+        NetUtility.C_KEEP_ALIVE -= OnKeepAlive;
+    }
 
     private void OnKeepAlive(NetMessage nm)
     {

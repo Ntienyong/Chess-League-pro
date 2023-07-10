@@ -36,6 +36,6 @@ public class NetRematch : NetMessage
     }
     public override void ReceivedOnServer(NetworkConnection cnn)
     {
-        NetUtility.S_REMATCH.Invoke(this, cnn);
+        NetUtility.S_REMATCH?.Invoke(this, cnn);
     }
 }
