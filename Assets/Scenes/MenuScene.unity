@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657868, g: 0.49641263, b: 0.57481706, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -519,16 +519,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3322339}
   m_CullTransparentMesh: 1
---- !u!1 &9556689 stripped
+--- !u!1 &9556689
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 820045061}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &9556690 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9556691}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9556690
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4933460620124638, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 820045061}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434143537}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 9556691}
+  m_Father: {fileID: 1558184551}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &9556691
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 820045061}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9556689}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 9556690}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &11678438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3811,6 +3846,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 81117684}
   m_CullTransparentMesh: 1
+--- !u!1 &81149247
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 834783422}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106394210}
+  m_Layer: 0
+  m_Name: 'Pawn (Missing Prefab with guid: b1d95c04dd54e434aa65855a0f77d30f)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &81496970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5379,8 +5430,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df0399712e7a864287003933afca5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  server: {fileID: 110812076}
-  client: {fileID: 110812077}
 --- !u!114 &110812076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5417,9 +5466,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddd87a5bbb07fea49af109b0d17da11c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pieceVariationIndex: 0
-  homeTeam: 0
-  awayTeam: 0
 --- !u!4 &110812079
 Transform:
   m_ObjectHideFlags: 0
@@ -5918,6 +5964,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 120367697}
   m_CullTransparentMesh: 1
+--- !u!1 &130441047
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 60937192}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 172237735}
+  m_Layer: 0
+  m_Name: 'Pawn B (Missing Prefab with guid: 96df3eff672d34e439e6bdc73f391ba3)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &132668391
 GameObject:
   m_ObjectHideFlags: 0
@@ -6625,11 +6687,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 149237585}
   m_CullTransparentMesh: 1
---- !u!4 &158547349 stripped
+--- !u!4 &158547349
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 228542339}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501381210}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1416542878}
+  m_Father: {fileID: 1499607352}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &159160148
 GameObject:
   m_ObjectHideFlags: 0
@@ -7530,11 +7602,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!4 &172237735 stripped
+--- !u!4 &172237735
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 60937192}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130441047}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1031284998}
+  m_Father: {fileID: 1690247068}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &172843994
 GameObject:
   m_ObjectHideFlags: 0
@@ -9031,6 +9113,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220993180}
   m_CullTransparentMesh: 1
+--- !u!1 &224027396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 531593358}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1832060624}
+  m_Layer: 0
+  m_Name: 'Pawn B (Missing Prefab with guid: 96df3eff672d34e439e6bdc73f391ba3)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &224038273
 GameObject:
   m_ObjectHideFlags: 0
@@ -10908,6 +11006,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1820.0001, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &294121419
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 1642322067}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 389179193}
+  m_Layer: 0
+  m_Name: 'Pawn B (Missing Prefab with guid: 96df3eff672d34e439e6bdc73f391ba3)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &295074057
 GameObject:
   m_ObjectHideFlags: 0
@@ -12318,8 +12432,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: JOIN
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13368,8 +13482,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Connect players
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13763,1548 +13877,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b690c7d634f4f41b62d04c551bd67b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuAnimator: {fileID: 0}
-  countryTextUI: {fileID: 0}
-  isMatchLocal: 0
-  numberOfTimesButtonClicked: 0
-  homeAndAwayButtonClicked: 0
-  homeTeam: 0
-  awayTeam: 1
-  opponentTeam: 0
-  timeLeft: 0
-  timeGivenText: {fileID: 1141794024}
-  homeOrAwayText: {fileID: 544575723}
-  homeTeamColorIndexText: {fileID: 1594912117}
-  awayTeamColorIndexText: {fileID: 1475112242}
-  pieceTypeText: {fileID: 1405228316}
-  homePieceTypeText: {fileID: 1713463641}
-  awayPieceTypeText: {fileID: 1718677916}
-  arenaText: {fileID: 372577176}
-  teamSelectionText: {fileID: 1155511827}
-  pieceColor: []
-  homePiecesColor: []
-  awayPiecesColor: []
-  homeTeamColorIndex: 0
-  awayTeamColorIndex: 0
-  pieceTypeIndex: 0
-  homePieceTypeIndex: 0
-  awayPieceTypeIndex: 0
-  arenaIndex: 0
-  homeTeamSelected: 0
-  awayTeamSelected: 0
-  homeColorButton: {fileID: 17643992}
-  awayColorButton: {fileID: 858276422}
-  englishClubButtons:
-  - {fileID: 1943010811}
-  - {fileID: 1042342666}
-  - {fileID: 763067638}
-  - {fileID: 565834516}
-  - {fileID: 2117214203}
-  - {fileID: 515472836}
-  - {fileID: 83919003}
-  - {fileID: 1894845208}
-  - {fileID: 1073996159}
-  - {fileID: 250729455}
-  - {fileID: 1866317273}
-  - {fileID: 1196922094}
-  - {fileID: 1348346412}
-  - {fileID: 1462494283}
-  - {fileID: 147486316}
-  - {fileID: 320870107}
-  - {fileID: 149237587}
-  - {fileID: 661282465}
-  - {fileID: 1391293115}
-  - {fileID: 1051218215}
-  spanishClubButtons:
-  - {fileID: 362573205}
-  - {fileID: 1550117551}
-  - {fileID: 200814031}
-  - {fileID: 589164796}
-  - {fileID: 1717156281}
-  - {fileID: 83014061}
-  - {fileID: 1139278743}
-  - {fileID: 962225373}
-  - {fileID: 969954442}
-  - {fileID: 1718876756}
-  - {fileID: 1345501438}
-  - {fileID: 1280062200}
-  - {fileID: 3322341}
-  - {fileID: 338274589}
-  - {fileID: 464769478}
-  - {fileID: 721360852}
-  - {fileID: 538576304}
-  - {fileID: 1487832567}
-  - {fileID: 1619489147}
-  - {fileID: 613344102}
-  germanClubButtons:
-  - {fileID: 512139807}
-  - {fileID: 1880854423}
-  - {fileID: 1716538043}
-  - {fileID: 1786063711}
-  - {fileID: 788969921}
-  - {fileID: 1333990689}
-  - {fileID: 1792406676}
-  - {fileID: 120367699}
-  - {fileID: 1062016025}
-  - {fileID: 1044733175}
-  - {fileID: 1638961005}
-  - {fileID: 902756325}
-  - {fileID: 1625029018}
-  - {fileID: 1900146584}
-  - {fileID: 448999371}
-  - {fileID: 1705057994}
-  - {fileID: 1259835281}
-  - {fileID: 877086700}
-  italianClubButtons:
-  - {fileID: 1626611205}
-  - {fileID: 1457351881}
-  - {fileID: 1025446267}
-  - {fileID: 1009732124}
-  - {fileID: 309055260}
-  - {fileID: 1482841097}
-  - {fileID: 880085503}
-  - {fileID: 901464913}
-  - {fileID: 1151352825}
-  - {fileID: 1430097811}
-  - {fileID: 201596850}
-  - {fileID: 1039946862}
-  - {fileID: 331353379}
-  - {fileID: 825798645}
-  - {fileID: 101275000}
-  - {fileID: 1078632311}
-  - {fileID: 2002656281}
-  - {fileID: 1713137938}
-  - {fileID: 1214731202}
-  - {fileID: 1520785874}
-  frenchClubButtons:
-  - {fileID: 792801579}
-  - {fileID: 640284812}
-  - {fileID: 41064033}
-  - {fileID: 86697688}
-  - {fileID: 1493535498}
-  - {fileID: 1770553330}
-  - {fileID: 1337632494}
-  - {fileID: 1265263512}
-  - {fileID: 755716411}
-  - {fileID: 326463045}
-  - {fileID: 109670}
-  - {fileID: 355985682}
-  - {fileID: 1212865231}
-  - {fileID: 738546735}
-  - {fileID: 1101009982}
-  - {fileID: 2038534167}
-  - {fileID: 2095972073}
-  - {fileID: 555092388}
-  - {fileID: 1933121532}
-  - {fileID: 1781120366}
-  countries:
-  - {fileID: 21300000, guid: 3ef78a02c783b1748a72a099e6229843, type: 3}
-  - {fileID: 21300000, guid: a6eeab17686336d45a87067a49fa0be4, type: 3}
-  - {fileID: 21300000, guid: 42837bd0e3a469c4f9f4968b41dc4111, type: 3}
-  - {fileID: 21300000, guid: 6288b13653c1f794f93ad3d053c744e9, type: 3}
-  - {fileID: 21300000, guid: 0a72ec41443323d4dbbe345fee7f3158, type: 3}
-  spritePieceColor: []
-  original: {fileID: 315297234}
-  homeTeamVersus: {fileID: 1210464353}
-  awayTeamVersus: {fileID: 1298951926}
-  clubSelectionPanelActive: 0
-  englishClubs:
-  - idNumber: 0
-    clubName: Arsenal
-    clubShortName: Arsenal
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 4253a02cfdfd75842ae59ba4ee4b798b, type: 3}
-    piecesColor:
-    - {r: 0.6901961, g: 0.003921569, b: 0.09411766, a: 1}
-    - {r: 0.21960786, g: 0.21176472, b: 0.24313727, a: 1}
-    - {r: 0.8352942, g: 0.77647066, b: 0.7960785, a: 1}
-    domesticExpectations: Win both League and Cup
-    continentalExpectations: Reach Round of 16
-    financialExpectations: 10% Interest
-  - idNumber: 1
-    clubName: Aston Villa
-    clubShortName: A.Villa
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 9327f8da98fb4684093e3219757fdea3, type: 3}
-    piecesColor:
-    - {r: 0.6415094, g: 0.015129937, b: 0.015129937, a: 1}
-    - {r: 0, g: 0.55311793, b: 0.6981132, a: 1}
-    - {r: 0.7924528, g: 0, b: 0.72886014, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 2
-    clubName: Brighton & Hove Albion
-    clubShortName: B&HAlbn.
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 1b7078fc43d2bf64d8649320ea1c5f59, type: 3}
-    piecesColor:
-    - {r: 0.41960788, g: 0.6, b: 0.8352942, a: 1}
-    - {r: 0.83921576, g: 0.35686275, b: 0.32156864, a: 1}
-    - {r: 0.32156864, g: 0.8196079, b: 0.79215693, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 3
-    clubName: Burnley
-    clubShortName: Burnley
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 4eca39af1ccbc934fbed265bb5d0a12d, type: 3}
-    piecesColor:
-    - {r: 0.6313726, g: 0.20000002, b: 0.24705884, a: 1}
-    - {r: 0.6039216, g: 0.7960785, b: 0.83921576, a: 1}
-    - {r: 0.16470589, g: 0.14117648, b: 0.15686275, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 4
-    clubName: Chelsea
-    clubShortName: Chelsea
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 6038b2e0cc0d5ef4597fcd3fd4600120, type: 3}
-    piecesColor:
-    - {r: 0.03529412, g: 0.24705884, b: 0.5411765, a: 1}
-    - {r: 0.7725491, g: 0.6745098, b: 0.54901963, a: 1}
-    - {r: 0.9568628, g: 0.9568628, b: 0.9568628, a: 1}
-    domesticExpectations: Win both League and Cup
-    continentalExpectations: Win the Cup
-    financialExpectations: 50% Interest
-  - idNumber: 5
-    clubName: Crystal Palace
-    clubShortName: C.Palace
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: c558efb78c655e34d9cc357f459ce48e, type: 3}
-    piecesColor:
-    - {r: 0.49411768, g: 0.121568635, b: 0.21568629, a: 1}
-    - {r: 0.8588236, g: 0.8588236, b: 0.89019614, a: 1}
-    - {r: 0.17254902, g: 0.17254902, b: 0.18039216, a: 1}
-    domesticExpectations: Finish Mid-table
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 6
-    clubName: Everton
-    clubShortName: Everton
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 9b5f013d2f8179e4cbdeb109b28af1df, type: 3}
-    piecesColor:
-    - {r: 0.027450982, g: 0.21176472, b: 0.46274513, a: 1}
-    - {r: 0.9686275, g: 0.76470596, b: 0.90196085, a: 1}
-    - {r: 0.94117653, g: 0.81568635, b: 0.2901961, a: 1}
-    domesticExpectations: Finish in top 10
-    continentalExpectations: Qualify for the europa
-    financialExpectations: 1% Interest
-  - idNumber: 7
-    clubName: Fulham
-    clubShortName: Fulham
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 64b43f5b922e6bd439b41b954a0f2f54, type: 3}
-    piecesColor:
-    - {r: 0.9215687, g: 0.91372555, b: 0.95294124, a: 1}
-    - {r: 0.5803922, g: 0.70980394, b: 0.7411765, a: 1}
-    - {r: 0.16078432, g: 0.16862746, b: 0.16470589, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 8
-    clubName: Leeds
-    clubShortName: Leeds
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 7467d7e8891ee9247963a8616c6c1b7a, type: 3}
-    piecesColor:
-    - {r: 0.9450981, g: 0.94117653, b: 0.96470594, a: 1}
-    - {r: 0.89019614, g: 0.9490197, b: 0.6156863, a: 1}
-    - {r: 0.12941177, g: 0.09411766, b: 0.10588236, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: Qualify for Europa
-    financialExpectations: None
-  - idNumber: 9
-    clubName: Leicester
-    clubShortName: Lei.City
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 2c41715e99cc5a843a719d084d1b4f9c, type: 3}
-    piecesColor:
-    - {r: 0.121568635, g: 0.2784314, b: 0.6784314, a: 1}
-    - {r: 0.18039216, g: 0.18039216, b: 0.20784315, a: 1}
-    - {r: 0.8745099, g: 0.86666673, b: 0.86666673, a: 1}
-    domesticExpectations: Finish in top 10
-    continentalExpectations: Qualify for Champions League
-    financialExpectations: 2% Interest
-  - idNumber: 10
-    clubName: Liverpool
-    clubShortName: Liverpl.
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 4dabbd1f643f94a4a9a46f2155f7b97b, type: 3}
-    piecesColor:
-    - {r: 0.7607844, g: 0.011764707, b: 0.11764707, a: 1}
-    - {r: 0.08627451, g: 0.23529413, b: 0.25490198, a: 1}
-    - {r: 0.7254902, g: 0.7607844, b: 0.7411765, a: 1}
-    domesticExpectations: Win both League and Cup
-    continentalExpectations: Win the cup
-    financialExpectations: 30% Interest
-  - idNumber: 11
-    clubName: Manchester City
-    clubShortName: ManCity
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 0bd49f04c09997741a901ef7ea7cdf73, type: 3}
-    piecesColor:
-    - {r: 0.43921572, g: 0.7372549, b: 0.882353, a: 1}
-    - {r: 0.7960785, g: 0.9215687, b: 0.74509805, a: 1}
-    - {r: 0.6862745, g: 0.058823533, b: 0.19215688, a: 1}
-    domesticExpectations: Win both League and Cup
-    continentalExpectations: Win the Cup
-    financialExpectations: 30$ Interest
-  - idNumber: 12
-    clubName: Manchester United
-    clubShortName: ManUtd
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 4ddabe30ec34d464f9a35c85302f81d1, type: 3}
-    piecesColor:
-    - {r: 0.69803923, g: 0.08627451, b: 0.14509805, a: 1}
-    - {r: 0.85098046, g: 0.8196079, b: 0.8431373, a: 1}
-    - {r: 0.6862745, g: 0.74509805, b: 0.121568635, a: 1}
-    domesticExpectations: Win both League and Cup
-    continentalExpectations: Qualify for the champions league
-    financialExpectations: 30% Interest
-  - idNumber: 13
-    clubName: Newcastle United
-    clubShortName: New.Utd
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: edbc5acbc35e78e4c8b3986727d0b8d6, type: 3}
-    piecesColor:
-    - {r: 0.10196079, g: 0.09019608, b: 0.09411766, a: 1}
-    - {r: 0.058823533, g: 0.14509805, b: 0.32156864, a: 1}
-    - {r: 0.86274517, g: 0.87843144, b: 0.9215687, a: 1}
-    domesticExpectations: Finish mid-table
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 14
-    clubName: Nottingham Forest
-    clubShortName: Nott.Frst
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: fba1da32700c8aa48b22428390231648, type: 3}
-    piecesColor:
-    - {r: 0.7725491, g: 0.011764707, b: 0.14901961, a: 1}
-    - {r: 0.9333334, g: 0.90196085, b: 0.41176474, a: 1}
-    - {r: 0.14509805, g: 0.14117648, b: 0.3019608, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 15
-    clubName: Sheffield United
-    clubShortName: She.Utd
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 94415e6ad5b198c49b10172b240fb4c8, type: 3}
-    piecesColor:
-    - {r: 0.9686275, g: 0.21176472, b: 0.20000002, a: 1}
-    - {r: 0.9058824, g: 0.9058824, b: 0.9058824, a: 1}
-    - {r: 0.121568635, g: 0.121568635, b: 0.121568635, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 16
-    clubName: Southhampton
-    clubShortName: Southmtn.
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: eba625713f0c2894e9943e9b7ebc159b, type: 3}
-    piecesColor:
-    - {r: 0.92549026, g: 0.13725491, b: 0.18823531, a: 1}
-    - {r: 0.078431375, g: 0.121568635, b: 0.18823531, a: 1}
-    - {r: 0.18039216, g: 0.427451, b: 0.49411768, a: 1}
-    domesticExpectations: Finish mid-table
-    continentalExpectations: Qualify for Europa
-    financialExpectations: None
-  - idNumber: 17
-    clubName: Tottenham Hotspurs
-    clubShortName: Spurs
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 992338c8306d8cb4a8d1387f84756563, type: 3}
-    piecesColor:
-    - {r: 0.8941177, g: 0.8941177, b: 0.8941177, a: 1}
-    - {r: 0.20000002, g: 0.2627451, b: 0.59607846, a: 1}
-    - {r: 0.078431375, g: 0.42352945, b: 0.5254902, a: 1}
-    domesticExpectations: Win both League and Cup
-    continentalExpectations: Reach Knockout Stages
-    financialExpectations: 5% Interest
-  - idNumber: 18
-    clubName: Westham United
-    clubShortName: West.Utd
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: b7cb5e2032c5e8f449f4cca6458a1196, type: 3}
-    piecesColor:
-    - {r: 0.46274513, g: 0.10588236, b: 0.14117648, a: 1}
-    - {r: 0.12941177, g: 0.12941177, b: 0.15686275, a: 1}
-    - {r: 0.9333334, g: 0.8745099, b: 0.8078432, a: 1}
-    domesticExpectations: Finish in top 10
-    continentalExpectations: Qualify for the Europa
-    financialExpectations: None
-  - idNumber: 19
-    clubName: Wolves
-    clubShortName: Wolves
-    league: English
-    country: England
-    clubLogo: {fileID: 21300000, guid: 45af276d4224dec4f875a9da1b2ccda4, type: 3}
-    piecesColor:
-    - {r: 0.9215687, g: 0.53333336, b: 0.011764707, a: 1}
-    - {r: 0.12941177, g: 0.47058827, b: 0.5686275, a: 1}
-    - {r: 0.61960787, g: 0.6666667, b: 0.7019608, a: 1}
-    domesticExpectations: Finish mid-table
-    continentalExpectations: None
-    financialExpectations: None
-  spanishClubs:
-  - idNumber: 0
-    clubName: Athletic Bilbao
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 1dedc26956278034e8db8b3d91fc146d, type: 3}
-    piecesColor:
-    - {r: 0.69803923, g: 0.027450982, b: 0.050980397, a: 1}
-    - {r: 0.18431373, g: 0.18823531, b: 0.24313727, a: 1}
-    - {r: 0.45098042, g: 0.85098046, b: 0.4901961, a: 1}
-    domesticExpectations: Qualify for Europa League
-    continentalExpectations: Reach Knockout Stage
-    financialExpectations: None
-  - idNumber: 1
-    clubName: Athlectio Madrid
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 21dbe1ece29b59e40b16f02cc29e8646, type: 3}
-    piecesColor:
-    - {r: 0.7058824, g: 0.015686275, b: 0.10196079, a: 1}
-    - {r: 0.12941177, g: 0.12941177, b: 0.13333334, a: 1}
-    - {r: 0.9686275, g: 0.7137255, b: 0.4431373, a: 1}
-    domesticExpectations: Win the League
-    continentalExpectations: Reach the semi-finals
-    financialExpectations: None
-  - idNumber: 2
-    clubName: Barcelona
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 841a85ef94f9c61459fd0f65338c3136, type: 3}
-    piecesColor:
-    - {r: 0.19215688, g: 0.21176472, b: 0.3254902, a: 1}
-    - {r: 0.87843144, g: 0.7411765, b: 0.5137255, a: 1}
-    - {r: 0.7294118, g: 0.7411765, b: 0.7607844, a: 1}
-    domesticExpectations: Win the League
-    continentalExpectations: Win the Champions League
-    financialExpectations: 
-  - idNumber: 3
-    clubName: Cadiz
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: de9ec7c7ecd52cc44bbfe19d2f99e137, type: 3}
-    piecesColor:
-    - {r: 0.8470589, g: 0.79215693, b: 0.015686275, a: 1}
-    - {r: 0.078431375, g: 0.1137255, b: 0.14901961, a: 1}
-    - {r: 0, g: 0, b: 0, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 4
-    clubName: Celta Vigo
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: e8f14cf61efdb934f9c44d1f7a7fd3da, type: 3}
-    piecesColor:
-    - {r: 0.43921572, g: 0.64705884, b: 0.70980394, a: 1}
-    - {r: 0.09411766, g: 0.09411766, b: 0.08627451, a: 1}
-    - {r: 0.7411765, g: 0.043137256, b: 0.14117648, a: 1}
-    domesticExpectations: Get into top Four
-    continentalExpectations: Pass Group Stage
-    financialExpectations: None
-  - idNumber: 5
-    clubName: Elche
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 6106c2118aa51a847b23878916cc3c8a, type: 3}
-    piecesColor:
-    - {r: 0.9333334, g: 0.93725497, b: 0.9450981, a: 1}
-    - {r: 0.11764707, g: 0.1137255, b: 0.13725491, a: 1}
-    - {r: 0.64705884, g: 0.909804, b: 0.20000002, a: 1}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 6
-    clubName: Espanyol
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 27dc91d4548cdc8409e6386c57908004, type: 3}
-    piecesColor:
-    - {r: 0.06666667, g: 0.3803922, b: 0.7372549, a: 1}
-    - {r: 0.9490197, g: 0.45098042, b: 0.6901961, a: 1}
-    - {r: 0, g: 0, b: 0, a: 1}
-    domesticExpectations: Finish Mid-table
-    continentalExpectations: Qualify for Europa
-    financialExpectations: None
-  - idNumber: 7
-    clubName: Getafe
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: fac497715f1b3ff4c9f8864792a969b6, type: 3}
-    piecesColor:
-    - {r: 0.011764707, g: 0.18431373, b: 0.5647059, a: 1}
-    - {r: 0.50980395, g: 0.03137255, b: 0.1137255, a: 1}
-    - {r: 0.6117647, g: 0.87843144, b: 0.6, a: 1}
-    domesticExpectations: Finish Mid Table
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 8
-    clubName: Girona
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 9851bdee482e06349aba62c92a10577c, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 9
-    clubName: Las Palmas
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 16b2168fa6518b0478d8b17552f4dd76, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 10
-    clubName: Mallorca
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 612878c172fd72741b621adb39be87bc, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 11
-    clubName: Osasuna
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: bdabd6fa25151cd4f9da8bf26ed8dd00, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 12
-    clubName: Rayo Vallecano
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 5d845606ef2a98748ae83fd84d13f935, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Finish Mid Table
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 13
-    clubName: Real Betis
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: bc1ed524451def4479480f19ce0288a8, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Finish in top Four
-    continentalExpectations: Pass the round of 16
-    financialExpectations: None
-  - idNumber: 14
-    clubName: Real Madrid
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 3e8f47319176ed44f8a2aaad51523aa5, type: 3}
-    piecesColor:
-    - {r: 0.8313726, g: 0.8313726, b: 0.83921576, a: 1}
-    - {r: 0.5411765, g: 0.5019608, b: 0.7019608, a: 1}
-    - {r: 0.14117648, g: 0.13725491, b: 0.16862746, a: 1}
-    domesticExpectations: Win the League
-    continentalExpectations: Win the Cup
-    financialExpectations: None
-  - idNumber: 15
-    clubName: Real Sociedad
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 34dd1d1dabc51de4b9bfc8de8c312c72, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Finsh in top 10
-    continentalExpectations: Reach Knockout stages
-    financialExpectations: None
-  - idNumber: 16
-    clubName: Sevilla
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 1b706e1da4dd4bb4288ceadc96c7be0a, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Finish in top four
-    continentalExpectations: Reach Knockout stages
-    financialExpectations: None
-  - idNumber: 17
-    clubName: Valencia
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 15991de25f3b0e149b714421553a65e0, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Qualify for Europa
-    continentalExpectations: Pass the round of 16
-    financialExpectations: None
-  - idNumber: 18
-    clubName: Real Valladolid
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: 6d7e9b7395d91c5409645b4e0b95f13b, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Avoid Relegation
-    continentalExpectations: None
-    financialExpectations: None
-  - idNumber: 19
-    clubName: Villareal
-    clubShortName: 
-    league: Spanish
-    country: Spain
-    clubLogo: {fileID: 21300000, guid: e7a728f1d252fbb419db9464b492fa1a, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: Finish in top 10
-    continentalExpectations: Reach the quarter finals
-    financialExpectations: None
-  germanClubs:
-  - idNumber: 0
-    clubName: Ausburg
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 07eb1e5874440464e81f84549d81d9ab, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 1
-    clubName: BayernLeverkusen
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 6d7e4894da94fbd42a58ca130c177290, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 2
-    clubName: Bayern Munich
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 9f3ede62228139d42b01d302875e7288, type: 3}
-    piecesColor:
-    - {r: 0.8705883, g: 0.03529412, b: 0, a: 0}
-    - {r: 0.87843144, g: 0.89019614, b: 0.91372555, a: 0}
-    - {r: 0.19215688, g: 0.19215688, b: 0.23137257, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 3
-    clubName: Bochum
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 6215f3517fffa334cbbb7d3544c39ad8, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 4
-    clubName: Borrusia Dortmund
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 1c0d0d57ad70c3943a1144a228748c48, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 5
-    clubName: Mochengladbach
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 2f0015ce2cd99b7438de65b72c56f8c9, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 6
-    clubName: Frankfurt
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 0bc36a53b14c87049a3caa00341827c3, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 7
-    clubName: Freiburg
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 4ea466dea88e1bb488baaf554366731b, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 8
-    clubName: Hertha BSC
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 4ea466dea88e1bb488baaf554366731b, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 9
-    clubName: Hoffenheim
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 98721a29f9619ed4aade3e473345e357, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 10
-    clubName: FC Koln
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 10afb9e47d0a42843b765e0165e55ed5, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 11
-    clubName: RB Leipzig
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 6aa79aef5a9743844ad10f0ba5b2256b, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 12
-    clubName: Mainz 05
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: ab4fd36ae9efbbe45a76db887383e53e, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 13
-    clubName: Schalke 04
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 5f12f1a12a7ea234bb75aa3c64b6b914, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 14
-    clubName: Vfb Stuttgart
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: ccd6c25eaf20b964ca77bbbf8c0e0141, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 15
-    clubName: Union Berlin
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 53b608f30516a554d8f8d4653aaec9fc, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 16
-    clubName: Werder Bremen
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 1d34b704c1daa1042b8b0378cfa95f89, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 17
-    clubName: Vfl Wolfsburg
-    clubShortName: 
-    league: German
-    country: Germany
-    clubLogo: {fileID: 21300000, guid: 8db94a551b43e2646ae734c94ce03a95, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  italianClubs:
-  - idNumber: 0
-    clubName: Atalanta
-    clubShortName: 
-    league: Italian
-    country: Ityaly
-    clubLogo: {fileID: 21300000, guid: d3de31ee46a377a489deea3cc0db7b5a, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 1
-    clubName: Bologna
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 28336c981e725f2459a6f6cd8f2e7e10, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 2
-    clubName: Cremonsa
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 4d41e25aa77082b48bb84cdd97f6ee52, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 3
-    clubName: Empoli
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 5580a35b88336ba499b9587419c88282, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 4
-    clubName: Fiorentina
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 5580a35b88336ba499b9587419c88282, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 5
-    clubName: Hellas Verona
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 98104faaff905564789421433e0f3612, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 6
-    clubName: Inter Milan
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 71d620850eea6c949a21727a12a2641e, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 7
-    clubName: Juventus
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 4c014bfcc410bea448cfa58f7099998d, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 8
-    clubName: Lazio
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: d397929cbb6b22b478011f0b1adffa7e, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 9
-    clubName: Lecce
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: c16d0f23c42e58244a77c9ef6065c17c, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 10
-    clubName: Monza
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 987573ae816d21541a307ece439ede17, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 11
-    clubName: Milan
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 128f7aeb662fe5246ae6e125189b11b2, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 12
-    clubName: Napoli
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: c7b13b2c0a075da4cb6c8e0ac6a2935d, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 13
-    clubName: Roma
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 5f034c0755d37a942927649647bd421e, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 14
-    clubName: Salernitana
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 44ef8d883a707024fba975fc67a15c54, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 15
-    clubName: Sampdoria
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 018cd91e1d6ca064f84f60041d351232, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 16
-    clubName: Sassuolo
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: bd402d312dd844e4dbc9070b74052990, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 17
-    clubName: Spezia
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 879705844872ae44db6c413efdd8a2df, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 18
-    clubName: Torino
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 41f0d88aee88b1f44bcac23848625385, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 19
-    clubName: Udinese Calcio
-    clubShortName: 
-    league: Italian
-    country: Italy
-    clubLogo: {fileID: 21300000, guid: 91476eaffef87d5419246be724cf0752, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  frenchClubs:
-  - idNumber: 0
-    clubName: Ajaccio
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 46511de3e42cc9d4ea8eb13a59e513f0, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 1
-    clubName: Angers
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: a0e027e140ac07b4386b481c0201e41a, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 2
-    clubName: Auxerre
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 27e5cf863b983d84f978a1e32aeb9337, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 3
-    clubName: Brest
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: cd27dd046d5e5874bb0e409fd573d250, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 4
-    clubName: Clermont Foot
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: f96576121afd188448a393fc3f7360bd, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 5
-    clubName: Lens
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: beeeb41c0ef30f344b31e5da430e66dd, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 6
-    clubName: Lille
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 3e52f7e6660729849a9f94dfa7d30ee1, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 7
-    clubName: Lorient
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: d2ced1ec6609aff47bed3cbfd8946b9b, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 8
-    clubName: Lyon
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 895acb7776225e44483d9a592a1977d8, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 9
-    clubName: Marseille
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: a4f4350317d64c64c88b0061c4edefe5, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 10
-    clubName: Monaco
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 1c40077ba92fab844bda0e681bd787aa, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 11
-    clubName: Montpellier
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 7e75003795449624caff01f70fa3ccbd, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 12
-    clubName: Nantes
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 41f1b7221ba01dc4cb56f309c5c864be, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 13
-    clubName: OG Nice
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: e7a08410ac0efcb43a9b712177a6b4ef, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 14
-    clubName: PSG
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: f2486e803ad4336479ca24c760c37cc0, type: 3}
-    piecesColor:
-    - {r: 0.14117648, g: 0.20000002, b: 0.3254902, a: 0}
-    - {r: 0.7254902, g: 0.7294118, b: 0.7490196, a: 0}
-    - {r: 0.93725497, g: 0.93725497, b: 0.93725497, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 15
-    clubName: Reims
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 37a77481080d3dc419c54510a348efc5, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 16
-    clubName: Rennes
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: a68eec490a4a3dd4fb9e7e05c1d3aed9, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 17
-    clubName: Strasbourg
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 8bf7f556c65ccfe40bc631e20511ba29, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 18
-    clubName: Toulouse
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 6411dfe43e103cb4890271255c7d170e, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  - idNumber: 19
-    clubName: Troyes
-    clubShortName: 
-    league: French
-    country: France
-    clubLogo: {fileID: 21300000, guid: 4fccb091f42b8e04696d9f2b971e2df0, type: 3}
-    piecesColor:
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    - {r: 0, g: 0, b: 0, a: 0}
-    domesticExpectations: 
-    continentalExpectations: 
-    financialExpectations: 
-  allCountries:
-  - idNumber: 0
-    countryName: Argentina
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 1
-    countryName: Australia
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 2
-    countryName: Belgium
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 3
-    countryName: Brazil
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 4
-    countryName: Colombia
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 5
-    countryName: Croatia
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 6
-    countryName: Denmark
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 7
-    countryName: England
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 8
-    countryName: Germany
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 9
-    countryName: Italy
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 10
-    countryName: Japan
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 11
-    countryName: Mexico
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 12
-    countryName: Morocco
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 13
-    countryName: Netherlands
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 14
-    countryName: Nigeria
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 15
-    countryName: Portugal
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 16
-    countryName: Spain
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 17
-    countryName: Switzerland
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 18
-    countryName: Senegal
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 19
-    countryName: USA
-    leagues: 
-    countryFlag: {fileID: 0}
-  - idNumber: 20
-    countryName: Uruguay
-    leagues: 
-    countryFlag: {fileID: 0}
-  modeSelectionTextUI: {fileID: 299145252}
-  randomSelectionTextUI: {fileID: 38476922}
-  mainMenu: {fileID: 745554457}
-  selectPlayMode: {fileID: 544482414}
-  selectRuleSetSP: {fileID: 982321428}
-  selectServerOrClient: {fileID: 293472492}
-  waitingForClient: {fileID: 1128307055}
-  customModeRules: {fileID: 855417328}
-  RandomModeRules: {fileID: 103538949}
-  selectBothTeamsColor: {fileID: 169299744}
-  selectPiecesType: {fileID: 1995138436}
-  selectTeam: {fileID: 194213696}
-  selectCountry: {fileID: 927380933}
-  selectEnglishClub: {fileID: 252992373}
-  selectSpanishClub: {fileID: 2096186104}
-  selectGermanClub: {fileID: 2024595000}
-  selectItalianClub: {fileID: 2083268547}
-  selectFrenchClub: {fileID: 11678438}
-  kitSelectionPanel: {fileID: 807866154}
-  kitBackButton: {fileID: 1920360600}
-  homePiece: {fileID: 1031284997}
-  homePieceI: {fileID: 1212222663}
-  awayPiece: {fileID: 1814057436}
-  awayPieceI: {fileID: 1244398254}
-  homeTypePieceI: {fileID: 1106321198}
-  homeTypePieceII: {fileID: 9556689}
-  awayTypePieceI: {fileID: 1416542877}
-  awayTypePieceII: {fileID: 1106394209}
-  homeColorPiece: {fileID: 1926785275}
-  awayColorPiece: {fileID: 1771462120}
-  addressInput: {fileID: 566516905}
-  countrySpriteIndex: 0
-  clubSpriteIndex: 0
 --- !u!114 &357818361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15326,7 +13898,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 357818355}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6fa48e3dad3f5334aa0789a228a04be5, type: 3}
+  m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!95 &357818363
@@ -15360,88 +13932,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d37b93edfc4e44b864a62c4b5e979d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countries:
-  - {fileID: 21300000, guid: 3ef78a02c783b1748a72a099e6229843, type: 3}
-  - {fileID: 21300000, guid: a6eeab17686336d45a87067a49fa0be4, type: 3}
-  - {fileID: 21300000, guid: 42837bd0e3a469c4f9f4968b41dc4111, type: 3}
-  - {fileID: 21300000, guid: 6288b13653c1f794f93ad3d053c744e9, type: 3}
-  - {fileID: 21300000, guid: 0a72ec41443323d4dbbe345fee7f3158, type: 3}
-  englishClubsActive: 0
-  spanishClubsActive: 0
-  germanClubsActive: 0
-  italianClubsActive: 0
-  frenchClubsActive: 0
-  domesticSuccess: {fileID: 1692149871}
-  continentalSuccess: {fileID: 307273468}
-  financialSuccess: {fileID: 431978106}
-  careerSelectType: {fileID: 830852632}
-  selectLocalCareerTeam: {fileID: 623600775}
-  selectNewOrLoadCareer: {fileID: 1384646298}
-  setPlayerProfile: {fileID: 819589869}
-  nationalityPanel: {fileID: 377836709}
-  nationalityPrefabParent: {fileID: 1498079412}
-  nationalityPicked: 0
-  nationalityPrefab: {fileID: 4571700025967208114, guid: e7f170d549c9c1345b84a66223ab4265, type: 3}
-  favouriteTeamPrefab: {fileID: 4571700025967208114, guid: e7f170d549c9c1345b84a66223ab4265, type: 3}
-  favouriteTeamPrefabParent: {fileID: 803911884}
-  favouriteTeamPanel: {fileID: 249449499}
-  nationalityArrow: {fileID: 1362111402}
-  profilePageBackButton: {fileID: 1642765891}
-  nationalityText: {fileID: 53908032}
-  favouriteTeamText: {fileID: 0}
-  clubCard: {fileID: 915107273384933103, guid: 06252261bcafbba4e9c59730fcb736b1, type: 3}
-  leagueTable: {fileID: 369451352}
-  menuCard: {fileID: 7054663111962483531, guid: 964de5ccaa52442439b0324f9762fc25, type: 3}
-  localMenuList: {fileID: 1896861726}
-  localCareerSubMenuList: {fileID: 1531825733}
-  calenderCard: {fileID: 925183573734277445, guid: 3d68a804666aec242a3044f8d20c2782, type: 3}
-  matchDay: 0
-  advanceBool: 0
-  squadBool: 0
-  transferBool: 0
-  myOfficeBool: 0
-  seasonStatsBool: 0
-  calenderBool: 0
-  settingsBool: 0
-  quitBool: 0
-  advanceButtonPressedAlready: 0
-  firstKit: {fileID: 86374764}
-  secondKit: {fileID: 1490584857}
-  thirdKit: {fileID: 968321610}
-  clubSpriteIndex: 0
-  localCareerOriginal: {fileID: 868143888}
-  localTeamsClub: {fileID: 1847121631}
-  numberofMonthDays: 0
-  years: 0
-  weekDays:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  months:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  localCareerClubName: 
-  localCareerClubLogo: {fileID: 0}
-  localCareermanagername: 
-  calender: {fileID: 715508064}
-  calenderScrollRect: {fileID: 1036387139}
-  calenderContentTransform: {fileID: 1357363262}
-  scrollSpeed: 10
-  delayBetweenItems: 1
 --- !u!1 &360067990
 GameObject:
   m_ObjectHideFlags: 0
@@ -15772,6 +14262,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362573203}
   m_CullTransparentMesh: 1
+--- !u!1 &366562477
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 729438128}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926785276}
+  m_Layer: 0
+  m_Name: 'Pawn B (Missing Prefab with guid: 96df3eff672d34e439e6bdc73f391ba3)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &369451352
 GameObject:
   m_ObjectHideFlags: 0
@@ -16505,11 +15011,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 387744764}
   m_CullTransparentMesh: 1
---- !u!4 &389179193 stripped
+--- !u!4 &389179193
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 1642322067}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294121419}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1814057437}
+  m_Father: {fileID: 27436018}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &390140653
 GameObject:
   m_ObjectHideFlags: 0
@@ -18815,6 +17331,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433487479}
   m_CullTransparentMesh: 1
+--- !u!1 &434143537
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 820045061}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9556690}
+  m_Layer: 0
+  m_Name: 'Pawn (Missing Prefab with guid: b1d95c04dd54e434aa65855a0f77d30f)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &441749549
 GameObject:
   m_ObjectHideFlags: 0
@@ -21101,6 +19633,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 500712359}
   m_CullTransparentMesh: 1
+--- !u!1 &501381210
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 228542339}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 158547349}
+  m_Layer: 0
+  m_Name: 'Pawn B (Missing Prefab with guid: 96df3eff672d34e439e6bdc73f391ba3)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &506587819
 GameObject:
   m_ObjectHideFlags: 0
@@ -32981,6 +31529,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793178353}
   m_CullTransparentMesh: 1
+--- !u!1 &795102772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 1936197667}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244398257}
+  m_Layer: 0
+  m_Name: 'Pawn (Missing Prefab with guid: b1d95c04dd54e434aa65855a0f77d30f)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &800835236
 GameObject:
   m_ObjectHideFlags: 0
@@ -37244,8 +35808,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Host
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -41488,11 +40052,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1031284997 stripped
+--- !u!1 &1031284997
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 60937192}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1031284998}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1031284998
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 60937192}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1031284997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 172237735}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1032674334
 GameObject:
   m_ObjectHideFlags: 0
@@ -44985,21 +43574,81 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1105880381}
   m_CullTransparentMesh: 1
---- !u!1 &1106321198 stripped
+--- !u!1 &1106321198
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 531593358}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1106394209 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106321199}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106321199
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 531593358}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106321198}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1832060624}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1106394209
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 834783422}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1106394210 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1106394211}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1106394210
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4933460620124638, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 834783422}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81149247}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1106394211}
+  m_Father: {fileID: 1499607352}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1106394211
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 834783422}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106394209}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1106394210}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116759193
 GameObject:
   m_ObjectHideFlags: 0
@@ -47076,6 +45725,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1142860588}
   m_CullTransparentMesh: 1
+--- !u!1 &1147929220
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 1129651816}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212222664}
+  m_Layer: 0
+  m_Name: 'Pawn (Missing Prefab with guid: b1d95c04dd54e434aa65855a0f77d30f)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1148942367
 GameObject:
   m_ObjectHideFlags: 0
@@ -49945,16 +48610,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1210464351}
   m_CullTransparentMesh: 1
---- !u!1 &1212222663 stripped
+--- !u!1 &1212222663
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 1129651816}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1212222664 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1212222665}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1212222664
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4933460620124638, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 1129651816}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1147929220}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1212222665}
+  m_Father: {fileID: 1690247068}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1212222665
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 1129651816}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212222663}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1212222664}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1212865229
 GameObject:
   m_ObjectHideFlags: 0
@@ -50655,8 +49355,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Back
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -51150,16 +49850,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237902332}
   m_CullTransparentMesh: 1
---- !u!1 &1244398254 stripped
+--- !u!1 &1244398254
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 1936197667}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1244398257 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1244398255}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1244398255
 Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 1936197667}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1244398254}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1244398257}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1244398257
+Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 4933460620124638, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   m_PrefabInstance: {fileID: 1936197667}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 795102772}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1244398255}
+  m_Father: {fileID: 27436018}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1247922164
 GameObject:
   m_ObjectHideFlags: 0
@@ -58107,11 +56842,36 @@ Transform:
   m_Father: {fileID: 357818359}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1416542877 stripped
+--- !u!1 &1416542877
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 228542339}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1416542878}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1416542878
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 228542339}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1416542877}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 158547349}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1416880348
 GameObject:
   m_ObjectHideFlags: 0
@@ -67096,8 +65856,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Scene
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -73080,16 +71840,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1770553328}
   m_CullTransparentMesh: 1
---- !u!1 &1771462120 stripped
+--- !u!1 &1771462120
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 218045861}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1771462123 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771462121}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1771462121
 Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 218045861}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1771462120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1771462123}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1771462123
+Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 218045861}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875466824}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1771462121}
+  m_Father: {fileID: 931993753}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1775064072
 GameObject:
   m_ObjectHideFlags: 0
@@ -74663,11 +73458,36 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1813281284}
   m_CullTransparentMesh: 1
---- !u!1 &1814057436 stripped
+--- !u!1 &1814057436
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 1642322067}
   m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1814057437}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1814057437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 1642322067}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1814057436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 389179193}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1814142716
 GameObject:
   m_ObjectHideFlags: 0
@@ -75145,11 +73965,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1829732743}
   m_CullTransparentMesh: 1
---- !u!4 &1832060624 stripped
+--- !u!4 &1832060624
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 531593358}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224027396}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1106321199}
+  m_Father: {fileID: 1558184551}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1843045457
 GameObject:
   m_ObjectHideFlags: 0
@@ -76375,6 +75205,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1872279314}
   m_CullTransparentMesh: 1
+--- !u!1 &1875466824
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 218045861}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1771462123}
+  m_Layer: 0
+  m_Name: 'Pawn B (Missing Prefab with guid: 96df3eff672d34e439e6bdc73f391ba3)'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1876479833
 GameObject:
   m_ObjectHideFlags: 0
@@ -77981,16 +76827,51 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1926785275 stripped
+--- !u!1 &1926785275
 GameObject:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 729438128}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1926785276 stripped
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1926785277}
+  m_Layer: 0
+  m_Name: Placeholder for referenced GameObject in Prefab instance (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1926785276
 Transform:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 729438128}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366562477}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1926785277}
+  m_Father: {fileID: 1051311529}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1926785277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 9223372036854775807, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 729438128}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1926785275}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1926785276}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1927559302
 GameObject:
   m_ObjectHideFlags: 0
@@ -80690,8 +79571,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 127.0.0.1
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -82515,8 +81396,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: "\u200B"
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 7021635aa5db7714095e9a2d6306fa67, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
