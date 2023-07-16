@@ -62,7 +62,6 @@ public class MenuUI : MonoBehaviour
     [SerializeField] private GameObject selectBothTeamsColor, selectPiecesType;
     [SerializeField] private GameObject selectTeam;
     [SerializeField] private GameObject selectCountry;
-
     [SerializeField] private GameObject selectEnglishClub;
     [SerializeField] private GameObject selectSpanishClub;
     [SerializeField] private GameObject selectGermanClub;
