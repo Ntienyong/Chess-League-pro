@@ -62,6 +62,7 @@ public class CareerUI : MonoBehaviour
         domesticSuccess.text = MenuUI.Instance.englishClubs[clubSpriteIndex].domesticExpectations;
         continentalSuccess.text = MenuUI.Instance.englishClubs[clubSpriteIndex].continentalExpectations;
         financialSuccess.text = MenuUI.Instance.englishClubs[clubSpriteIndex].financialExpectations;
+
         firstKit.color = MenuUI.Instance.englishClubs[clubSpriteIndex].piecesColor[0];
         secondKit.color = MenuUI.Instance.englishClubs[clubSpriteIndex].piecesColor[1];
         thirdKit.color = MenuUI.Instance.englishClubs[clubSpriteIndex].piecesColor[2];
