@@ -9,7 +9,8 @@ public enum OpCode
     START_GAME = 3,
     MAKE_MOVE = 4,
     REMATCH = 5,
-    CHANGE_TIME = 6
+    CHANGE_TIME = 6,
+    SELECT_TEAM = 7
 
 }
 public static class NetUtility
@@ -27,6 +28,7 @@ public static class NetUtility
             case OpCode.REMATCH: msg = new NetRematch(stream); break;
             //Settings OpCode
             case OpCode.CHANGE_TIME: msg = new NetChangeTime(stream); break;
+            case OpCode.SELECT_TEAM: msg = new NetSelectTeam(stream); break;
             default:
                 Debug.LogError("Message received had no OpCode");
                 break;
@@ -45,10 +47,12 @@ public static class NetUtility
     public static Action<NetMessage> C_MAKE_MOVE;
     public static Action<NetMessage> C_REMATCH;
     public static Action<NetMessage> C_CHANGE_TIME;
+    public static Action<NetMessage> C_SELECT_TEAM;
     public static Action<NetMessage, NetworkConnection> S_KEEP_ALIVE;
     public static Action<NetMessage, NetworkConnection> S_WELCOME;
     public static Action<NetMessage, NetworkConnection> S_START_GAME;
     public static Action<NetMessage, NetworkConnection> S_MAKE_MOVE;
     public static Action<NetMessage, NetworkConnection> S_REMATCH;
     public static Action<NetMessage, NetworkConnection> S_CHANGE_TIME;
+    public static Action<NetMessage, NetworkConnection> S_SELECT_TEAM;
 }

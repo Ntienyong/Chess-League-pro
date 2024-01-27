@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
 
     //Settings logic
     public float timeLeft;
-    public int homeTeam, awayTeam, opponentTeam;
+    public int homeTeam, awayTeam, opponentTeam, assignedTeam;
     public int homePieceTypeIndex, awayPieceTypeIndex;
     public Color homePiecesColor, awayPiecesColor;
     public int stadiumIndex;
@@ -43,6 +43,7 @@ public class GameManager : MonoBehaviour
     private void RegisterEvents()
     {
         NetUtility.S_WELCOME += OnWelcomeServer;
+
         NetUtility.C_WELCOME += OnWelcomeClient;
 
         NetUtility.C_START_GAME += OnStartGameClient;
@@ -66,7 +67,6 @@ public class GameManager : MonoBehaviour
         //Client has connected, assign a team and return the message back to him
         NetWelcome nw = msg as NetWelcome;
 
-        Debug.Log(playerCount);
         //Assign a team
         nw.AssignedTeam = ++playerCount;
         
@@ -88,12 +88,11 @@ public class GameManager : MonoBehaviour
 
         NetWelcome nw = msg as NetWelcome;
 
-       currentTeam = nw.AssignedTeam;
+        currentTeam = nw.AssignedTeam;
 
         Debug.Log($"My assigned team is {nw.AssignedTeam}");
-        Debug.Log("Local game is "  + localGame);
 
-        if (localGame && (currentTeam == 0))
+        if (localGame && currentTeam == 0 || localGame && currentTeam == 1)
             Server.Instance.Broadcast(new NetStartGame());
     }
 
@@ -110,4 +109,13 @@ public class GameManager : MonoBehaviour
         currentTeam = -1;
         localGame = v;
     }
+
+
+    //public void SetHostandClientTeam()
+    //{
+    //    Server.Instance.connections[0] = hostTeam;
+    //    Server.Instance.connections[1] = clientTeam;
+    //}
+
+
 }

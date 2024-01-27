@@ -34,8 +34,8 @@ public class Client : MonoBehaviour
         {
             //UnregisterToEvent();
             driver.Dispose();
-            isActive = false;
             connection = default(NetworkConnection);
+            isActive = false;
         }
     }
     public void OnDestroy()

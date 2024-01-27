@@ -64,7 +64,6 @@ public class Chessboard : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log(GameManager.instance.currentTeam);
 
         isWhiteTurn = true;
 
@@ -455,16 +454,19 @@ public class Chessboard : MonoBehaviour
 
     public void OnMenuButton()
     {
-        NetRematch rm = new NetRematch();
-        rm.teamId = GameManager.instance.currentTeam;
-        rm.wantRematch = 0;
-        Client.Instance.SendToServer(rm);
+        //NetRematch rm = new NetRematch();
+        //rm.teamId = GameManager.instance.currentTeam;
+        //rm.wantRematch = 0;
+        //Client.Instance.SendToServer(rm);
 
-        GameReset();
 
-        Invoke("ShutDown", .1f);
 
         GameUI.Instance.StartCouroutineLoadScene();
+
+        Invoke("ShutDown", .1f);
+        Client.Instance.OnDestroy();
+
+        GameReset();
         // Reset some values
         
     }
@@ -945,20 +947,20 @@ public class Chessboard : MonoBehaviour
         //    isBlackTurn = true;
         //}
 
-        if (!isWhiteTurn)
-        {
-            GameUI.Instance.blackTimerOn = true;
-            GameUI.Instance.whiteTimerOn = false;
+        //if (!isWhiteTurn)
+        //{
+        //    GameUI.Instance.blackTimerOn = true;
+        //    GameUI.Instance.whiteTimerOn = false;
             
-        }
-        else if (isWhiteTurn)
-        {
-            GameUI.Instance.blackTimerOn = false;
-            GameUI.Instance.whiteTimerOn = true;
+        //}
+        //else if (isWhiteTurn)
+        //{
+        //    GameUI.Instance.blackTimerOn = false;
+        //    GameUI.Instance.whiteTimerOn = true;
 
-        }
-        StartCoroutine(BlackTimerCountdown());
-        StartCoroutine(WhiteTimerCountdown());
+        //}
+        //StartCoroutine(BlackTimerCountdown());
+        //StartCoroutine(WhiteTimerCountdown());
 
 
         if (GameManager.instance.localGame)
