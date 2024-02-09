@@ -133,6 +133,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2496239100136864750, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 3597828320213244000}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &254405589 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
+  m_PrefabInstance: {fileID: 3597828320374041301}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &382383470
 GameObject:
   m_ObjectHideFlags: 0
@@ -473,6 +478,11 @@ GameObject:
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
   m_PrefabInstance: {fileID: 3597828321196316483}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2064135397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3021841205889163604, guid: 96df3eff672d34e439e6bdc73f391ba3, type: 3}
+  m_PrefabInstance: {fileID: 3597828320964884318}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3597828319992820507
 GameObject:
@@ -7533,9 +7543,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
-        m_MethodName: OnSelectPieceTypeButton
+      - m_Target: {fileID: 3597828320849236008}
+        m_TargetAssemblyTypeName: MultiplayerUI, Assembly-CSharp
+        m_MethodName: OnSelectPiecesButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -7803,12 +7813,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3597828321558634724}
-  m_Father: {fileID: 3597828322068573468}
-  m_RootOrder: 4
+  m_Father: {fileID: 3597828320375616635}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -409}
+  m_AnchoredPosition: {x: 0, y: -449.99997}
   m_SizeDelta: {x: 600, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3597828320244471531
@@ -7855,9 +7865,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
-        m_MethodName: OnConfirmPieceTypeButton
+      - m_Target: {fileID: 3597828320849236008}
+        m_TargetAssemblyTypeName: MultiplayerUI, Assembly-CSharp
+        m_MethodName: OnConfirmPiecesButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9894,7 +9904,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Select Home Piece.
+  m_text: Select Pieces Type.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -11561,6 +11571,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3597828320880486580}
+  - {fileID: 3597828320244471530}
   - {fileID: 3597828321104348452}
   - {fileID: 3597828322068573468}
   m_Father: {fileID: 3597828321346824789}
@@ -25963,6 +25974,7 @@ MonoBehaviour:
   selectFrenchClub: {fileID: 3597828320645807414}
   selectCountry: {fileID: 3597828320279558677}
   selectBothTeamsColor: {fileID: 3597828320735756528}
+  selectPiecesType: {fileID: 3597828321346824788}
   clubSelectionPanelActive: 0
   countrySpriteIndex: 0
   clubSpriteIndex: 0
@@ -26012,7 +26024,7 @@ MonoBehaviour:
     clubShortName: ASV
     league: Premier League
     country: England
-    clubLogo: {fileID: 0}
+    clubLogo: {fileID: 21300000, guid: 9327f8da98fb4684093e3219757fdea3, type: 3}
     piecesColor:
     - {r: 0.5471698, g: 0.069686726, b: 0.21863198, a: 1}
     - {r: 0.17021184, g: 0.5127457, b: 0.8018868, a: 1}
@@ -26238,7 +26250,13 @@ MonoBehaviour:
   homePieceTypeIndex: 0
   awayPieceTypeIndex: 0
   TeamColorIndex: 0
+  pieceTypeIndex: 0
   TeamColorIndexText: {fileID: 3597828322027676325}
+  PieceTypeIndexText: {fileID: 3597828321074589321}
+  pieceId: 0
+  testPrefabs:
+  - {fileID: 2064135397}
+  - {fileID: 254405589}
 --- !u!95 &3597828320849236011
 Animator:
   serializedVersion: 3
@@ -33742,11 +33760,11 @@ RectTransform:
   - {fileID: 3597828321393572610}
   - {fileID: 3597828320312253691}
   m_Father: {fileID: 3597828320375616635}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: -41}
+  m_AnchoredPosition: {x: 0, y: -41}
   m_SizeDelta: {x: 440, y: 600}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &3597828321104348453
@@ -42141,7 +42159,7 @@ GameObject:
   - component: {fileID: 3597828321393572612}
   - component: {fileID: 3597828321393572611}
   m_Layer: 5
-  m_Name: SelectHomePieceButton
+  m_Name: SelectPieceButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42211,9 +42229,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: MenuUI, Assembly-CSharp
-        m_MethodName: OnSelectHomePieceTypeButton
+      - m_Target: {fileID: 3597828320849236008}
+        m_TargetAssemblyTypeName: MultiplayerUI, Assembly-CSharp
+        m_MethodName: OnSelectTeamPieceType
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63904,7 +63922,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &3597828322068573468
 RectTransform:
   m_ObjectHideFlags: 0
@@ -63920,9 +63938,8 @@ RectTransform:
   - {fileID: 3597828322127445736}
   - {fileID: 3597828321951178107}
   - {fileID: 3597828321602040701}
-  - {fileID: 3597828320244471530}
   m_Father: {fileID: 3597828320375616635}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}

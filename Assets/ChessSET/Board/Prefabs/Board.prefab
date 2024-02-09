@@ -101,6 +101,10 @@ MonoBehaviour:
   boardCenter: {x: 0, y: 0, z: 0}
   deathSize: 0.5
   deathSpacing: 0.55
+  dragOffset: 1.5
+  victoryScreen: {fileID: 0}
+  rematchIndicator: {fileID: 0}
+  rematchButton: {fileID: 0}
   prefabs:
   - {fileID: 1867195236767680, guid: b1d95c04dd54e434aa65855a0f77d30f, type: 3}
   - {fileID: 1211746330687442, guid: a72c2cd1520039b4084a4a33dfeccf7e, type: 3}
@@ -108,6 +112,9 @@ MonoBehaviour:
   - {fileID: 1672242659374470, guid: f005021ceced8b240983e71a3d481180, type: 3}
   - {fileID: 1471985601831630, guid: 664a4dc6e997f5f47a9233db911328ac, type: 3}
   - {fileID: 1810274083847610, guid: 309659d4eb727d74d91c4875a85edc00, type: 3}
+  prefabsOne: []
+  stadiums: []
   teamMaterials:
   - {fileID: 2100000, guid: 1160e19ba7d779840af3786741906d91, type: 2}
   - {fileID: 2100000, guid: 072119292c8a33f49872f875100bf290, type: 2}
+  promotionUI: {fileID: 0}

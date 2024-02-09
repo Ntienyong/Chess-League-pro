@@ -18,7 +18,7 @@ public class MultiplayerUI : MonoBehaviour
     [SerializeField] private GameObject selectItalianClub;
     [SerializeField] private GameObject selectFrenchClub;
     [SerializeField] private GameObject selectCountry;
-    [SerializeField] private GameObject selectBothTeamsColor;
+    [SerializeField] private GameObject selectBothTeamsColor, selectPiecesType;
     [SerializeField] public bool clubSelectionPanelActive;
     [SerializeField] public int countrySpriteIndex, clubSpriteIndex;
     [SerializeField] private GameObject kitSelectionPanel, kitBackButton;
@@ -40,13 +40,17 @@ public class MultiplayerUI : MonoBehaviour
 
     public GameObject[] homeVariants;
     public GameObject[] awayVariants;
+    public GameObject homePieces;
+    public GameObject awayPieces;
     public GameObject colorTestPiece;
 
     public Color colorSelected;
 
     public int homePieceTypeIndex, awayPieceTypeIndex;
-    public int TeamColorIndex;
-    public TextMeshProUGUI TeamColorIndexText;
+    public int TeamColorIndex, pieceTypeIndex;
+    public TextMeshProUGUI TeamColorIndexText, PieceTypeIndexText;
+
+    public GameObject[] testPrefabs;
 
 
 
@@ -63,6 +67,9 @@ public class MultiplayerUI : MonoBehaviour
 
         TeamColorIndexText.text = "First";
         TeamColorIndex = 0;
+
+        pieceTypeIndex = 0;
+        PieceTypeIndexText.text = "Classic I";
 
 
     }
@@ -292,7 +299,7 @@ public class MultiplayerUI : MonoBehaviour
         Client.Instance.SendToServer(st);
     }
 
-
+    //Select & Set Pieces Color
     public void OnSelectColorButton()
     {
         //kitBackButton.SetActive(false);
@@ -305,26 +312,18 @@ public class MultiplayerUI : MonoBehaviour
     {
         //kitBackButton.SetActive(true);
         selectBothTeamsColor.SetActive(false);
-        if (awayPieceTypeIndex == 0)
+
+
+        for (int i = 0; i < homeVariants.Length; i++)
         {
-            awayVariants[0].SetActive(true);
-            awayVariants[1].SetActive(false);
+            homeVariants[pieceTypeIndex].SetActive(true);
         }
-        else if (awayPieceTypeIndex == 1)
+
+        for (int i = 0; i < awayVariants.Length; i++)
         {
-            awayVariants[1].SetActive(true);
-            awayVariants[0].SetActive(false);
+            awayVariants[pieceTypeIndex].SetActive(true);
         }
-        if (homePieceTypeIndex == 0)
-        {
-            homeVariants[0].SetActive(true);
-            homeVariants[1].SetActive(false);
-        }
-        else if (homePieceTypeIndex == 1)
-        {
-            homeVariants[0].SetActive(false);
-            homeVariants[1].SetActive(true);
-        }
+
 
         colorSelected = teamSelected.piecesColor[TeamColorIndex];
 
@@ -357,6 +356,68 @@ public class MultiplayerUI : MonoBehaviour
             //colorSelected = teamSelected.piecesColor[TeamColorIndex];
         }
     }
+
+    //Select & Set Pieces Type
+    public void OnSelectPiecesButton()
+    {
+        //kitBackButton.SetActive(false);
+        selectPiecesType.SetActive(true);
+        homeVariants[0].SetActive(false);
+        awayVariants[0].SetActive(false);
+    }
+
+    public void OnConfirmPiecesButton()
+    {
+        //kitBackButton.SetActive(true);
+        selectPiecesType.SetActive(false);
+        awayPieces.SetActive(true);
+        homePieces.SetActive(true);
+        //if (GameManager.instance.currentTeam == 0)
+        //{
+        //    for (int i = 0; i < homeVariants.Length; i++)
+        //    {
+        //        homeVariants[pieceTypeIndex].SetActive(true);
+        //    }
+        //}
+
+        //if (GameManager.instance.currentTeam != 0)
+        //{
+        //    for (int i = 0; i < awayVariants.Length; i++)
+        //    {
+        //        awayVariants[pieceTypeIndex].SetActive(true);
+        //    }
+        //}
+
+
+    }
+
+    public void OnSelectTeamPieceType()
+    {
+        pieceTypeIndex++;
+
+        if (pieceTypeIndex == 1)
+        {
+            PieceTypeIndexText.text = "Classic II";
+            for (int i = 0; i < testPrefabs.Length; i++)
+            {
+                testPrefabs[i].SetActive(false);
+            }
+            testPrefabs[pieceTypeIndex].SetActive(true);
+        }
+
+        if (pieceTypeIndex > 1)
+        {
+            PieceTypeIndexText.text = "Classic I";
+            pieceTypeIndex = 0;
+            for(int i = 0; i < testPrefabs.Length; i++)
+            {
+                testPrefabs[i].SetActive(false);
+            }
+            testPrefabs[pieceTypeIndex].SetActive(true);
+        }
+    }
+
+
 
     public void OnAdvanceToGameButton()
     {
@@ -399,9 +460,7 @@ public class MultiplayerUI : MonoBehaviour
     {
         NetSelectTeam st = msg as NetSelectTeam;
 
-        teamsVersusTextUI[st.teamId].text = st.clubName;
-
-        
+        teamsVersusTextUI[st.teamId].text = st.clubName;      
 
         if(st.teamId != 0)
         {
@@ -422,7 +481,6 @@ public class MultiplayerUI : MonoBehaviour
         }
 
 
-        
 
 
     }
